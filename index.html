@@ -7,7 +7,8 @@
     <title>Latihan DOM | Konversi Suhu</title>
     <style>
         span {
-            font-size: 48px;
+            font-size: 22px;
+            display: block;
         }
     </style>
 </head>
@@ -15,15 +16,24 @@
 <body>
     <label for="temp">Temp</label>
     <input type="number" name="temp" id="temp" placeholder="0" value="40">
-    <span></span>
+    <span id="result-reamur"></span>
+    <span id="result-kelvin"></span>
+    <span id="result-fahrenheit"></span>
     <script>
         const input = document.getElementById('temp')
-        const reamur = 0.8 * input.value
+        const reamur = 0.8 * input.value 
         const kelvin = 273.15 + input.value
         const fahrenheit = 32 + (input.value * 9 / 5)
-        console.log(`Hasil konversi ${input}celcius menjadi reamur adalah ${reamur}`)
-        console.log(`Hasil konversi ${input}celcius menjadi kelvin adalah ${kelvin}`)
-        console.log(`Hasil konversi ${input}celcius menjadi fahrenheit adalah ${fahrenheit}`)
+        const resultReamur = `Hasil konversi ${input.value}celcius menjadi reamur adalah ${reamur}`
+        const resultKelvin = `Hasil konversi ${input.value}celcius menjadi kelvin adalah ${kelvin}`
+        const resultFahrenheit = `Hasil konversi ${input.value}celcius menjadi fahrenheit adalah ${fahrenheit}`
+        const spanReamur = document.getElementById("result-reamur")
+        const spanKelvin = document.getElementById("result-kelvin")
+        const spanFahrenheit = document.getElementById("result-fahrenheit")
+
+        spanReamur.textContent = resultReamur + reamur
+        spanKelvin.textContent = resultKelvin + kelvin
+        spanFahrenheit.textContent = resultFahrenheit + fahrenheit
     </script>
 </body>
 

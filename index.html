@@ -21,9 +21,9 @@
     <span id="result-fahrenheit"></span>
     <script>
         const input = document.getElementById('temp')
-        const reamur = 0.8 * input.value 
-        const kelvin = 273.15 + input.value
-        const fahrenheit = 32 + (input.value * 9 / 5)
+        const reamur = parseInt(input.value) * 4/5 
+        const kelvin = 273.15 + parseInt(input.value)
+        const fahrenheit = 32 + (parseInt(input.value) * 9 / 5)
         const resultReamur = `Hasil konversi ${input.value}celcius menjadi reamur adalah ${reamur}`
         const resultKelvin = `Hasil konversi ${input.value}celcius menjadi kelvin adalah ${kelvin}`
         const resultFahrenheit = `Hasil konversi ${input.value}celcius menjadi fahrenheit adalah ${fahrenheit}`
@@ -31,9 +31,9 @@
         const spanKelvin = document.getElementById("result-kelvin")
         const spanFahrenheit = document.getElementById("result-fahrenheit")
 
-        spanReamur.textContent = resultReamur + reamur
-        spanKelvin.textContent = resultKelvin + kelvin
-        spanFahrenheit.textContent = resultFahrenheit + fahrenheit
+        spanReamur.textContent = resultReamur
+        spanKelvin.textContent = resultKelvin
+        spanFahrenheit.textContent = resultFahrenheit
     </script>
 </body>
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan DOM | Konversi Suhu</title>
+    <style>
+        span {
+            font-size: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="temp">Temp</label>
+    <input type="number" name="temp" id="temp" placeholder="0" value="40">
+    <span></span>
+    <script>
+        const input = document.getElementById('temp')
+        const reamur = 0.8 * input.value
+        const kelvin = 273.15 + input.value
+        const fahrenheit = 32 + (input.value * 9 / 5)
+        console.log(`Hasil konversi ${input}celcius menjadi reamur adalah ${reamur}`)
+        console.log(`Hasil konversi ${input}celcius menjadi kelvin adalah ${kelvin}`)
+        console.log(`Hasil konversi ${input}celcius menjadi fahrenheit adalah ${fahrenheit}`)
+    </script>
+</body>
+
+</html>
